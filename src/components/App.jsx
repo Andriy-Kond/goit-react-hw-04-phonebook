@@ -12,6 +12,10 @@ export const App = () => {
   const [contacts, setContacts] = useState([]);
   const [filter, setFilter] = useState('');
 
+  // const [contacts, setContacts] = useState(
+  //   JSON.parse(window.localStorage.getItem('contacts') ?? [])
+  // );
+
   useEffect(() => {
     const contactsFromLS = localStorage.getItem('contacts');
     const contactsFromLSParced = JSON.parse(contactsFromLS);
